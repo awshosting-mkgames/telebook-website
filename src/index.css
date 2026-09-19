@@ -1,0 +1,23 @@
+/* Global reset.
+   Browsers give <body> an 8px margin by default, which left a white gutter
+   down the left/right edges of every page (and let the fixed landing-page nav
+   sit wider than the content under it). Pages draw their own backgrounds, so
+   the document itself must be flush to the viewport. */
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}

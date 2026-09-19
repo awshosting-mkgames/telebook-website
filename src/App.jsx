@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, NavLink, Navigate } from "react-router-dom";
 
+import LandingPage from "./pages/LandingPage.jsx";
 import AboutApp from "./pages/AboutApp.jsx";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
@@ -62,7 +63,8 @@ export default function App() {
     <BrowserRouter>
       {/* <AppNav /> */}
       <Routes>
-        <Route path="/" element={<Navigate to="/about" replace />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/download" element={<LandingPage />} />
         <Route path="/about" element={<AboutApp />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
@@ -75,6 +77,7 @@ export default function App() {
             />
           }
         />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
