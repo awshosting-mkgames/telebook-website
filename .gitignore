@@ -1,0 +1,6 @@
+node_modules/
+dist.zip
+
+# APK binaries: GitHub rejects any file over 100 MB.
+# Build copies public/downloads/ -> dist/downloads/, so ignore both.
+*.apk
